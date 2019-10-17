@@ -10,12 +10,12 @@
     <header>
       <nav>
         <ul class="nav_left">
-          <li><img src="" alt=""></li> <!--Logo-->
+          <li><img src="" alt="Vinylooper Logo"></li> <!--Logo-->
         </ul>
         <ul class="nav_mid">
           <li><a href="#">Vinyles</a></li> <!--Vinyles-->
-          <li><a href="#"></a>Matériel</li> <!--Matériel-->
-          <li><a href="#"></a>Assistance</li> <!--FAQ-->
+          <li><a href="#">Matériel</a></li> <!--Matériel-->
+          <li><a href="#">Assistance</a></li> <!--FAQ-->
         </ul>
         <ul class="nav_right">
           <li><a href="#"><img src="" alt=""></a></li> <!--Panier-->
@@ -32,6 +32,10 @@
 
       </div>
     </section>
+    
+    <footer>
 
+
+    </footer>
   </body>
 </html>
