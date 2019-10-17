@@ -1,1 +1,13 @@
 body{}
+
+header{
+    display: block;
+}
+nav ul li {
+  width: 200px;
+  height: 50px;
+}
+nav ul li img{
+  width: 300px;
+  height: 300px;
+}
