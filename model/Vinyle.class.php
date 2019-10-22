@@ -8,7 +8,7 @@ class Vinyle extends Produit {
   private label;
 
   function __construct(string $intitule=NULL,string $info=NULL,float $prix=0,
-  string $ref=NULL,string $categorie=NULL,string $img,int $genre=99, int $annee=NULL,string $artiste=NULL,
+  string $ref=NULL,string $categorie=NULL,string $img,string $genre="Autre", int $annee=NULL,string $artiste=NULL,
   string $album=NULL, string $label="Non défini", int $quantite)
   {
     Produit::__construct($intitule, $info, $prix, $ref, $categorie, $img);
@@ -25,11 +25,7 @@ class Vinyle extends Produit {
 
     //On initialise $genre
     //Genre donné en int, si genre inexistant = "Autre"
-    if($genre==0){
-
-    } else {
-      $this->genre="Autre";
-    }
+    $this->genre=$genre;
 
     //On initialise $annee
     if(isset($annee)){
