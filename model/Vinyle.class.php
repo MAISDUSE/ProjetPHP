@@ -8,8 +8,7 @@ class Vinyle extends Produit {
   private label;
 
   function __construct(string $intitule=NULL,string $info=NULL,float $prix=0,
-  string $ref=NULL,string $categorie=NULL,string $img,int $genre=99,
-  int $taille=0, int $annee=NULL,string $artiste=NULL,
+  string $ref=NULL,string $categorie=NULL,string $img,int $genre=99, int $annee=NULL,string $artiste=NULL,
   string $album=NULL, string $label="Non défini", int $quantite)
   {
     Produit::__construct($intitule, $info, $prix, $ref, $categorie, $img);
@@ -31,9 +30,6 @@ class Vinyle extends Produit {
     } else {
       $this->genre="Autre";
     }
-
-    //On intialise $taille en pouce
-    $this->taille = $taille.'"';
 
     //On initialise $annee
     if(isset($annee)){

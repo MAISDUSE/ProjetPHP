@@ -6,7 +6,6 @@ CREATE TABLE Vinyle {
   categorie VARCHAR(20),
   img VARCHAR(50),
   genre NUMERIC,
-  taille NUMERIC,
   annee NUMERIC,
   artiste VARCHAR(30),
   album VARCHAR(30),
