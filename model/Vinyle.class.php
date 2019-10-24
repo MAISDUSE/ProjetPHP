@@ -1,11 +1,13 @@
 <?php
+require_once('Produit.class.php');
+
 class Vinyle extends Produit {
-  private genre;
-  private taille;
-  private annee;
-  private artiste;
-  private album;
-  private label;
+  private $genre;
+  private $taille;
+  private $annee;
+  private $artiste;
+  private $album;
+  private $label;
 
   function __construct(string $intitule=NULL,string $info=NULL,float $prix=0,
   string $ref=NULL,string $categorie=NULL,string $img,string $genre="Autre", int $annee=NULL,string $artiste=NULL,

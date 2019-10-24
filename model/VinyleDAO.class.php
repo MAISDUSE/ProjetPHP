@@ -5,10 +5,12 @@ class VinyleDAO {
   // L'objet local PDO de la base de données
   private $db;
   // Le type, le chemin et le nom de la base de données
-  private $database = 'sqlite:../data/vinyle.db';
+  private $database;
 
   //Constructeur
-  function __construct() {
+  function __construct($chemin) {
+    $database="sqlite::".$chemin;
+    var_dump($database);
     try {
       $this->db = new PDO($this->database);
     }

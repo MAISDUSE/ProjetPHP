@@ -1,7 +1,9 @@
 <?php
-class Produit extends Produit{
-  private constructeur;
-  private type;
+require_once('Produit.class.php');
+
+class Materiel extends Produit{
+  private $constructeur;
+  private $type;
 
   function __construct(string $intitule=NULL,string $info=NULL,float $prix=0,string $ref=NULL,string $categorie=NULL,string $img,
   int $type=99, string $constructeur=NULL, int $quantite){
@@ -18,14 +20,14 @@ class Produit extends Produit{
     }
 
     assert(isset($this->constructeur));
-
-    //Getters
-    function getConstructeur(){
-      return $this->constructeur;
-    }
-
-    function getType(){
-      return $this->type;
-    }
   }
+  //Getters
+  public function getConstructeur(){
+    return $this->constructeur;
+  }
+
+  public function getType(){
+    return $this->type;
+  }
+
 } ?>

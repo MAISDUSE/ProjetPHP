@@ -1,12 +1,12 @@
 <?php
 class Produit {
-  protected intitule;
-  protected info;
-  protected prix;
-  protected ref;
-  protected categorie;
-  protected img;
-  protected quantite;
+  protected $intitule;
+  protected $info;
+  protected $prix;
+  protected $ref;
+  protected $categorie;
+  protected $img;
+  protected $quantite;
 
   function __construct(string $intitule=NULL,string $info=NULL,float $prix=0,string $ref=NULL,string $categorie=NULL,string $img,int $quantite) {
     $this->quantite = $quantite;
@@ -33,35 +33,35 @@ class Produit {
 
   //Getters
 
-  public getIntitule() {
+  public function getIntitule() {
     return $this->intitule;
   }
 
-  public getInfo() {
+  public function getInfo() {
     return $this->info;
   }
 
-  public getPrix() {
+  public function getPrix() {
     return $this->prix;
   }
 
-  public getRef() {
+  public function getRef() {
     return $this->ref;
   }
 
-  public getCategorie() {
+  public function getCategorie() {
     return $this->categorie;
   }
 
-  public getImg() {
+  public function getImg() {
     return $this->img;
   }
 
-  public getQuantite(){
+  public function getQuantite(){
     return $this->quantite;
   }
 
-  public getPrixTotal(){
+  public function getPrixTotal(){
     return $this->quantite*$this->prix;
   }
 

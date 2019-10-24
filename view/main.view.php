@@ -27,7 +27,7 @@
     <div class=""> <!--Nos vinyles-->
       <ul class="LesDifferentsVinyles">
         <?php
-        foreach($genres as $vinyle){ //parcours array list de genreq recupérer depuis bd et on recupére chaque premier vinyle de chaque genre pour avoir illsutration
+        foreach($genrespres as $vinyle){ //parcours array list de genreq recupérer depuis bd et on recupére chaque premier vinyle de chaque genre pour avoir illsutration
           ?>
           <a href="=<?= $vinyle->getGenre() ?>">
             <img class="cover" src="<?= $vinyle->getImg() ?>" />
