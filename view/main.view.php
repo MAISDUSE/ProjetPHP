@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Vinylooper</title>
-  <link rel="stylesheet" href="/design/style.css">
+  <link rel="stylesheet" href="../view/design/style.css">
 </head>
 <body>
 
@@ -29,15 +29,18 @@
         <?php
         foreach($genrespres as $vinyle){ //parcours array list de genreq recupérer depuis bd et on recupére chaque premier vinyle de chaque genre pour avoir illsutration
           ?>
-          <a href="=<?= $vinyle->getGenre() ?>">
-            <img class="cover" src="<?= $vinyle->getImg() ?>" />
-          </a>
+          <li>
+              <a href="">
+                <img class="cover" src="<?= $vinyle->getImg() ?>" alt="<?= $vinyle->getIntitule()?>"/>
+                <p><?= $vinyle->getGenre() ?></p>
+              </a>
+          </li>
         <?php } ?>
       </ul>
       <!-- <button type="button" name="Voir plus"></button>
       pour limiter affichage a un nombre defini dans le foreach...-->
-
-      <h2>Matériel</h2>
+      <?php
+      /*<h2>Matériel</h2>
       <div class=""> <!--Notre matériel-->
         <ul class="LesDifferentsMateriels">
           <?php
@@ -48,6 +51,7 @@
             </a>
           <?php } ?>
         </ul>
+        */?>
         <!-- <button type="button" name="Voir plus"></button>
         pour limiter affichage a un nombre defini dans le foreach...-->
       </div>

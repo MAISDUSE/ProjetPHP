@@ -16,7 +16,7 @@ var_dump($jukebox);
 
 
 
-$view->assgin("genrespres",$jukebox->getVinylesPresentation());
+$view->assign("genrespres",$jukebox->getVinylesPresentation());
 
 
 

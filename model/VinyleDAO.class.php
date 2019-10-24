@@ -9,10 +9,10 @@ class VinyleDAO {
 
   //Constructeur
   function __construct($chemin) {
-    $database="sqlite::".$chemin;
-    var_dump($database);
+    //$database=
+    //var_dump($database);
     try {
-      $this->db = new PDO($this->database);
+      $this->db = new PDO("sqlite:../model/data/data.db");
     }
     catch (PDOException $e) {
       die("erreur de connexion : ".$e->getMessage());
@@ -22,7 +22,7 @@ class VinyleDAO {
   function getAllGenres() : array{
     $req = "SELECT DISTINCT genre FROM Vinyle";
     $lignedb = $this->db->query($req);
-    $lancement = $lignedb->fetchall(PDO::FETCH_CLASS);
+    $lancement = $lignedb->fetchAll(PDO::FETCH_ASSOC);
     $result=array($lancement);
     // Verification que l'objet a été trouvé
     if (count($result) == 1) {
@@ -35,12 +35,14 @@ class VinyleDAO {
   }
 
   function getVinylesPresentation() : array {
-    $genres = getAllGenres();
+    $genres = array($this->getAllGenres());
+    var_dump($genres);
     $result=array();
     foreach($genres as $genre){
-      $req ="SELECT * FROM Vinyle WHERE genre=$genre LIMIT = 1";
+      $req ="SELECT * FROM Vinyle WHERE genre='$genre' LIMIT 1";
       $lignedb = $this->db->query($req);
-      $lancement = $lignedb->fetchall(PDO::FETCH_CLASS, "Vinyle");
+      $lancement = $lignedb->fetchAll(PDO::FETCH_CLASS, "Vinyle");
+
       array_push($result, $lancement);
     }
     // Verification que l'objet a été trouvé
