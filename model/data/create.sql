@@ -1,4 +1,4 @@
-CREATE TABLE Vinyle {
+<CREATE TABLE Vinyle {
   intitule VARCHAR(100),
   info VARCHAR(200),
   prix NUMERIC,
@@ -21,5 +21,6 @@ CREATE TABLE Materiel {
   categorie VARCHAR(20),
   img VARCHAR(50),
   type VARCHAR(30),
-  constructeur VARCHAR(30)
+  constructeur VARCHAR(30),
+  nom VARCHAR(30)
 };
