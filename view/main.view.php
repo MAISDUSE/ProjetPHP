@@ -8,10 +8,9 @@
 <body>
 
   <header>
-    <img src="" alt="Vinylooper Logo" class="logo"><!--Logo-->
+    <img src="" alt="Vinylooper Logo" class="logo"> <!--Logo-->
     <nav>
       <ul class="nav_mid">
-
         <li><a href="#">Vinyles</a></li> <!--Vinyles-->
         <li><a href="#">Matériel</a></li> <!--Matériel-->
         <li><a href="#">Assistance</a></li> <!--FAQ-->
@@ -22,47 +21,37 @@
   </header>
 
   <section>
-    <h2>Vinyles</h2>
-    <div class=""> <!--Nos vinyles-->
+    <div class="cat"> <!--Nos vinyles-->
+      <h2>Vinyles</h2>
       <ul class="LesDifferentsVinyles">
         <?php
-        foreach($genrespres as $vinyle){ //parcours array list de genreq recupérer depuis bd et on recupére chaque premier vinyle de chaque genre pour avoir illsutration
+        foreach($genrespres as $vinyle){ //Parcours array list des genres de vinyle récuperés depuis la bd et on recupère chaque premier vinyle de chaque genre pour avoir l'illsutration
           ?>
           <li>
-              <a href="">
-                <img class="cover" src="<?= $vinyle->getImg() ?>" alt="<?= $vinyle->getIntitule()?>"/>
-                <p><?= $vinyle->getGenre() ?></p>
-              </a>
+            <a href=""><img class="cover" src="<?= $vinyle->getImg() ?>" alt="<?= $vinyle->getIntitule()?>"/></a>
+            <a href=""><p><?= $vinyle->getGenre() ?></p></a>
           </li>
         <?php } ?>
       </ul>
-      <!-- <button type="button" name="Voir plus"></button>
-      pour limiter affichage a un nombre defini dans le foreach...-->
-      <?php
-      /*<h2>Matériel</h2>
-      <div class=""> <!--Notre matériel-->
+      <a href="#">Voir Plus</a>
+      <div class="cat"> <!--Notre matériel-->
+        <h2>Matériel</h2>
         <ul class="LesDifferentsMateriels">
           <?php
-          foreach($types as $matos){ //parcours array list de types recupérer depuis bd et on recupére chaque premier matos de chaque pour illustartion
+          /*foreach($types as $matos){ //Parcours array list de types récuperés depuis la bd et on recupère chaque premier matos de chaque type pour l'illustration
             ?>
-            <a href="=<?= $matos->getType() ?>">
-              <img class="cover" src="<?= $matos->getImg() ?>" />
-            </a>
-          <?php } ?>
+            <a href="=<?= $matos->getType() ?>"><img class="cover" src="<?= $matos->getImg() ?>" /></a>
+          <?php } */?>
         </ul>
-        */?>
-        <!-- <button type="button" name="Voir plus"></button>
-        pour limiter affichage a un nombre defini dans le foreach...-->
+        <a href="#">Voir Plus</a>
       </div>
     </section>
 
     <footer>
       <ul class="footer">
-        <li><a href="#">Assistance</a></li>
-        <li><a href="#">Contact</a></li>
+        <li>Copyright (c) 2019 Vinylooper</li>
+        <li><a href="#">Nous contacter</a></li>
       </ul>
-    </nav>
-
     </footer>
   </body>
   </html>
