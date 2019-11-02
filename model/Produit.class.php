@@ -17,6 +17,7 @@ class Produit {
       $this->prix=$prix;
       $this->ref=$ref;
       $this->categorie=$categorie;
+      $this->img=$img;
     }
 
     //Contraintes d'intégrité
@@ -26,9 +27,9 @@ class Produit {
     assert(isset($this->prix));
     assert(isset($this->ref));
     assert(isset($this->categorie));
-
-    assert($this->quantite > 0);
-    assert($this->prix > 0);
+    assert(isset($this->img));
+    assert($this->quantite >= 0);
+    assert($this->prix >= 0);
   }
 
   //Getters
