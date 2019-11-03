@@ -23,3 +23,10 @@ CREATE TABLE Materiel (
   constructeur VARCHAR(30),
   nom VARCHAR(30)
 );
+
+CREATE TABLE Utilisateur (
+  nom VARCHAR(100),
+  prenom VARCHAR(100),
+  email VARCHAR(200),
+  password VARCHAR(100)
+);
