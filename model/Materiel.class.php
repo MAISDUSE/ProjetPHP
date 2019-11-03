@@ -5,19 +5,15 @@ class Materiel extends Produit{
   private $constructeur;
   private $type;
 
-  function __construct(string $intitule=NULL,string $info=NULL,float $prix=0,string $ref=NULL,string $categorie=NULL,string $img,
-  int $type=99, string $constructeur=NULL, int $quantite){
-    Produit::__construct($intitule, $info, $prix, $ref, $categorie, $img);
+  function __construct(array $array, int $quantite=0){
+    Produit::__construct($array['intitule'], $array['info'], $array['prix'], $array['ref'], $array['categorie'], $array['img'],$quantite);
 
-    if(isset($constructeur)){
-      $this->constructeur=$constructeur;
+    if(isset($v*array['constructeur'])){
+      $this->constructeur=$array['constructeur'];
     }
 
-    if ($type == 0){
+    $this->type = $array['type'] ?? "autre"
 
-    } else {
-      $type = "Autre";
-    }
 
     assert(isset($this->constructeur));
   }
