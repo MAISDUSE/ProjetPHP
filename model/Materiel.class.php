@@ -12,7 +12,7 @@ class Materiel extends Produit{
       $this->constructeur=$array['constructeur'];
     }
 
-    $this->type = $array['type'] ?? "autre"
+    $this->type = $array['type'] ?? "autre";
 
 
     assert(isset($this->constructeur));
