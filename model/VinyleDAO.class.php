@@ -40,10 +40,27 @@ class VinyleDAO {
     }
   }
 
+  function getVinyleGenre(string $genre) : array{
+    $result=array();
+    $req ="SELECT * FROM Vinyle WHERE genre='$genre'";
+    $lignedb = $this->db->query($req);
+    $lancement = $lignedb->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($lancement as $vinyle) {
+      $objVinyle = new Vinyle($vinyle);
+      array_push($result, $objVinyle);
+    }
+    // Verification que l'objet a été trouvé
+    if (count($result)!=0) {
+      return $result;
+    } elseif (count($result) == 0) {
+      throw new Exception('Erreur dans '.__METHOD__."()");
+    } else {
+      throw new Exception('Erreur dans '.__METHOD__);
+    }
+  }
+
   function getVinylesPresentation() : array {
     $genres = $this->getAllGenres();
-
-
     $result=array();
     foreach($genres as $genre){
       $req ="SELECT * FROM Vinyle WHERE genre='$genre' LIMIT 1";
