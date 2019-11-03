@@ -28,7 +28,7 @@
         foreach($genrespres as $vinyle){ //Parcours array list des genres de vinyle récuperés depuis la bd et on recupère chaque premier vinyle de chaque genre pour avoir l'illsutration
           ?>
           <li>
-            <a href=""><img class="cover" src="<?= $vinyle->getImg() ?>" alt="<?= $vinyle->getIntitule()?>"/></a>
+            <a href=""><img class="cover" src="../model/data/img/<?= $vinyle->getImg() ?>" alt="<?= $vinyle->getIntitule()?>"/></a>
             <a href=""><p><?= $vinyle->getGenre() ?></p></a>
           </li>
         <?php } ?>
@@ -41,7 +41,7 @@
           foreach($typespres as $matos){ //Parcours array list des genres de vinyle récuperés depuis la bd et on recupère chaque premier vinyle de chaque genre pour avoir l'illsutration
             ?>
             <li>
-              <a href=""><img class="cover" src="<?= $matos->getImg() ?>" alt="<?= $matos->getIntitule()?>"/></a>
+              <a href=""><img class="cover" src="../model/data/img/<?= $matos->getImg() ?>" alt="<?= $matos->getIntitule()?>"/></a>
               <a href=""><p><?= $matos->getType() ?></p></a>
             </li>
           <?php } ?>
