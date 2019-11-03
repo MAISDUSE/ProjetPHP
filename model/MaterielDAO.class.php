@@ -55,7 +55,7 @@ class MaterielDAO {
     // Verification que l'objet a été trouvé
 
     if (count($result)!=0) {
-      var_dump($result);
+      //var_dump($result);
       return $result;
     } elseif (count($result) == 0) {
       throw new Exception('Erreur dans '.__METHOD__."()");
