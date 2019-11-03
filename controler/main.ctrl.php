@@ -16,8 +16,8 @@ $view->assign("genrespres",$jukebox->getVinylesPresentation());
 
 //initialisation du materiel hifi
 $matos = new MaterielDAO($config['db_path']);
-var_dump($matos);
-//$view->assign("typespres",$matos->getMaterielPresentation());
+//var_dump($matos);
+$view->assign("typespres",$matos->getMaterielPresentation());
 
 
 

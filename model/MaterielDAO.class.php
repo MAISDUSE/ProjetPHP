@@ -31,7 +31,7 @@ class MaterielDAO {
       array_push($types,$type['type']);
     }
     if (count($types)>0 ) {
-
+      //var_dump($types);
       return $types;
     } elseif (count($types) == 0) {
       throw new Exception('Erreur dans '.__METHOD__."()");
@@ -40,7 +40,7 @@ class MaterielDAO {
     }
   }
   function getMaterielPresentation() : array {
-    $types = $this->getAllTypres();
+    $types = $this->getAllTypes();
 
 
     $result=array();
