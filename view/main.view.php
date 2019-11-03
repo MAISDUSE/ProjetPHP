@@ -38,10 +38,13 @@
         <h2>Matériel</h2>
         <ul class="LesDifferentsMateriels">
           <?php
-          /*foreach($types as $matos){ //Parcours array list de types récuperés depuis la bd et on recupère chaque premier matos de chaque type pour l'illustration
+          foreach($typespres as $matos){ //Parcours array list des genres de vinyle récuperés depuis la bd et on recupère chaque premier vinyle de chaque genre pour avoir l'illsutration
             ?>
-            <a href="=<?= $matos->getType() ?>"><img class="cover" src="<?= $matos->getImg() ?>" /></a>
-          <?php } */?>
+            <li>
+              <a href=""><img class="cover" src="<?= $matos->getImg() ?>" alt="<?= $matos->getIntitule()?>"/></a>
+              <a href=""><p><?= $matos->getType() ?></p></a>
+            </li>
+          <?php } ?>
         </ul>
         <a href="#">Voir Plus</a>
       </div>

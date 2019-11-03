@@ -33,5 +33,38 @@ class MaterielDAO {
       throw new Exception('Erreur dans '.__METHOD__);
     }
   }
+  function getMaterielPresentation() : array {
+    $types = $this->getAllTypres();
+
+
+    $result=array();
+    foreach($types as $type){
+      $req ="SELECT * FROM Materiel WHERE type='$type' LIMIT 1";
+      $lignedb = $this->db->query($req);
+      $lancement = $lignedb->fetchAll(PDO::FETCH_ASSOC);
+      $matos = new Materiel($lancement[0]);
+      array_push($result, $matos);
+
+    }
+    // Verification que l'objet a été trouvé
+
+    if (count($result)!=0) {
+      var_dump($result);
+      return $result;
+    } elseif (count($result) == 0) {
+      throw new Exception('Erreur dans '.__METHOD__."()");
+    } else {
+      throw new Exception('Erreur dans '.__METHOD__);
+    }
+
+  }
+
+
+
+
+
+
+
+
 }
 ?>

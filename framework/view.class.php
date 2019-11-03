@@ -29,14 +29,16 @@ class View {
 
     // Parcourt toutes les variables de la vue
     foreach ($this->param as $key => $value) {
-      // La notation $$ dédigne une variable de le nom est dans une autre variable
+      // La notation $$ dédigne une variable dont le nom est dans une autre variable
       $$key = $value;
+      // Création d'autant de variables locales qu'il y a d'atributs publics dans $this
     }
 
     // Inclusion de la vue
     // Comme cette inclusion est dans la portée de la méthode show alors
     // seules les variables locales à show sont visibles.
     include($p);
+    // A l'intérieur donc local a la methode show()
   }
 
   // Affiche toutes les valeurs des paramètres de la vue
