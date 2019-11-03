@@ -23,11 +23,17 @@ class MaterielDAO {
     $req = "SELECT DISTINCT type FROM Materiel";
     $lignedb = $this->db->query($req);
     $lancement = $lignedb->fetchAll(PDO::FETCH_ASSOC);
+
     $result=array($lancement);
     // Verification que l'objet a été trouvé
-    if (count($result) == 1) {
-      return $result[0];
-    } elseif (count($result) == 0) {
+    $types = array();
+    foreach($result[0] as $type){
+      array_push($types,$type['type']);
+    }
+    if (count($types)>0 ) {
+
+      return $types;
+    } elseif (count($types) == 0) {
       throw new Exception('Erreur dans '.__METHOD__."()");
     } else {
       throw new Exception('Erreur dans '.__METHOD__);
