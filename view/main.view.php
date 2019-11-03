@@ -12,10 +12,10 @@
     <nav>
       <ul class="nav_mid">
         <li><a href="#">Vinyles</a></li> <!--Vinyles-->
-        <li><a href="#">MatÃ©riel</a></li> <!--MatÃ©riel-->
+        <li><a href="#">Matériel</a></li> <!--MatÃ©riel-->
         <li><a href="#">Assistance</a></li> <!--FAQ-->
         <li><a href="#"><img src="../view/design/panier_image.png" alt="Panier" class="boutonsNav"></a></li> <!--Panier-->
-        <li><a href="#"><img src="../view/design/connexion_image.png" alt="Se connecter" class="boutonsNav"></a></li> <!--Se connecter-->
+        <li><a href="../controler/register.ctrl.php"><img src="../view/design/connexion_image.png" alt="Se connecter" class="boutonsNav"></a></li> <!--Se connecter-->
       </ul>
     </nav>
   </header>
@@ -35,7 +35,7 @@
         <a href="#">Voir Plus</a>
       </div>
 
-      <h2>MatÃ©riel</h2>
+      <h2>Matériel</h2>
       <div class="cat"> <!--Notre matÃ©riel-->
           <?php
           foreach($typespres as $matos){ //Parcours array list des genres de vinyle rÃ©cuperÃ©s depuis la bd et on recupÃ¨re chaque premier vinyle de chaque genre pour avoir l'illsutration
