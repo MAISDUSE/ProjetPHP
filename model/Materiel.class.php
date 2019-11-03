@@ -8,7 +8,7 @@ class Materiel extends Produit{
   function __construct(array $array, int $quantite=0){
     Produit::__construct($array['intitule'], $array['info'], $array['prix'], $array['ref'], $array['categorie'], $array['img'],$quantite);
 
-    if(isset($v*array['constructeur'])){
+    if(isset($array['constructeur'])){
       $this->constructeur=$array['constructeur'];
     }
 
