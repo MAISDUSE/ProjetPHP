@@ -1,18 +1,27 @@
 body{
   font-family: sans-serif;
+  color: white;
+  background-color: black;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 /*------------------------HEADER--------------------------*/
 
 header{
   text-align: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  color: black;
 }
 
+header a{
+  color: black;
+}
 nav {
   margin-left: -50px;
   margin-right: -50px;
@@ -46,7 +55,6 @@ nav ul li a:hover {
 }
 
 /*------------------------CORPS--------------------------*/
-
 h2{
   text-align: center;
 }
@@ -68,14 +76,6 @@ h2{
   width: 300px;
   height: 300px;
 }
-/*catVinyle.view*/
-.viewCatSec{
-  display: flex;
-  flex-wrap: wrap;
-}
-.viewCatDiv{
-  margin: 10px;
-}
 
 /*------------------------FOOTER--------------------------*/
 
@@ -83,6 +83,8 @@ footer ul {
   display: flex;
   justify-content: center;
   list-style-type: none;
+  color: white;
+  background-color: black;
 }
 
 footer ul li {
@@ -96,4 +98,68 @@ footer ul li a {
   text-decoration: underline;
   width: 250px;
   height: 50px;
+}
+/* ------------------------ catVinyle--------------------- */
+
+.catFormulaire form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 50px;
+
+  align-items: center;
+
+}
+.catFormulaire form div{
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.viewCatSec{
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+.viewCatDiv{
+  margin: 10px;
+}
+
+input[type=image]{
+  width: 300px;
+  height: 300px;
+}
+/* ------------------------ Vinyle--------------------- */
+
+.vinyle{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+
+}
+
+
+.vinyle img{
+  height: 500px;
+  width: 500px;
+}
+
+.tout{
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.vinyle article div{
+  margin: 10px;
+  padding-top: 0px;
+
+}
+.vinyleInfo p{
+  margin-top: 0px;
+}
+.non{
+  margin: 20px;
 }

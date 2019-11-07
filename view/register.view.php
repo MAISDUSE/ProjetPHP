@@ -5,11 +5,11 @@
   <title>Vinylooper.Register</title>
   <link rel="stylesheet" href="../view/design/register.style.css">
 </head>
-<header>
+<header class="menu">
   <img src="" alt="Vinylooper Logo" class="logo"> <!--Logo-->
   <nav>
     <ul class="nav_mid">
-      <li><a href="#">Vinyles</a></li> <!--Vinyles-->
+      <li><a href="../controler/catVinyle.ctrl.php>Vinyles</a></li> <!--Vinyles-->
       <li><a href="#">Matériel</a></li> <!--Matériel-->
       <li><a href="#">Assistance</a></li> <!--FAQ-->
       <li><a href="#"><img src="../view/design/panier_image.png" alt="Panier" class="boutonsNav"></a></li> <!--Panier-->

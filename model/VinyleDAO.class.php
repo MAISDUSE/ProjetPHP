@@ -31,7 +31,7 @@ class VinyleDAO {
       array_push($genres,$genre['genre']);
     }
     if (count($genres)>0 ) {
-
+      sort($genres);
       return $genres;
     } elseif (count($genres) == 0) {
       throw new Exception('Erreur dans '.__METHOD__."()");
@@ -39,20 +39,61 @@ class VinyleDAO {
       throw new Exception('Erreur dans '.__METHOD__);
     }
   }
-
-  function getVinyleGenre(string $genre) : array{
-    $result=array();
-    $req ="SELECT * FROM Vinyle WHERE genre='$genre'";
+  function getAllArtistes() : array{
+    $req = "SELECT DISTINCT artiste FROM Vinyle";
     $lignedb = $this->db->query($req);
     $lancement = $lignedb->fetchAll(PDO::FETCH_ASSOC);
-    foreach ($lancement as $vinyle) {
-      $objVinyle = new Vinyle($vinyle);
-      array_push($result, $objVinyle);
-    }
+
+    $result=array($lancement);
     // Verification que l'objet a été trouvé
-    if (count($result)!=0) {
-      return $result;
-    } elseif (count($result) == 0) {
+    $artistes = array();
+    foreach($result[0] as $artiste){
+      array_push($artistes,$artiste['artiste']);
+    }
+    if (count($artistes)>0 ) {
+      sort($artistes);
+      return $artistes;
+    } elseif (count($artistes) == 0) {
+      throw new Exception('Erreur dans '.__METHOD__."()");
+    } else {
+      throw new Exception('Erreur dans '.__METHOD__);
+    }
+  }
+  function getAllAnnees() : array{
+    $req = "SELECT DISTINCT annee FROM Vinyle";
+    $lignedb = $this->db->query($req);
+    $lancement = $lignedb->fetchAll(PDO::FETCH_ASSOC);
+
+    $result=array($lancement);
+    // Verification que l'objet a été trouvé
+    $annees = array();
+    foreach($result[0] as $annee){
+      array_push($annees,$annee['annee']);
+    }
+    if (count($annees)>0 ) {
+      sort($annees);
+      return $annees;
+    } elseif (count($annees) == 0) {
+      throw new Exception('Erreur dans '.__METHOD__."()");
+    } else {
+      throw new Exception('Erreur dans '.__METHOD__);
+    }
+  }
+  function getAllLabels() : array{
+    $req = "SELECT DISTINCT label FROM Vinyle";
+    $lignedb = $this->db->query($req);
+    $lancement = $lignedb->fetchAll(PDO::FETCH_ASSOC);
+
+    $result=array($lancement);
+    // Verification que l'objet a été trouvé
+    $labels = array();
+    foreach($result[0] as $label){
+      array_push($labels,$label['label']);
+    }
+    if (count($labels)>0 ) {
+      sort($labels);
+      return $labels;
+    } elseif (count($labels) == 0) {
       throw new Exception('Erreur dans '.__METHOD__."()");
     } else {
       throw new Exception('Erreur dans '.__METHOD__);
@@ -71,6 +112,55 @@ class VinyleDAO {
 
     }
     // Verification que l'objet a été trouvé
+
+    if (count($result)!=0) {
+      //var_dump($result);
+      return $result;
+    } elseif (count($result) == 0) {
+      throw new Exception('Erreur dans '.__METHOD__."()");
+    } else {
+      throw new Exception('Erreur dans '.__METHOD__);
+    }
+
+  }
+
+  function getVinyles( $genre,  $artiste,  $annee,  $label) : array{
+    $result=array();
+    $addAND = FALSE;
+    $req ="SELECT * FROM Vinyle";
+    if($genre != "Tous" || $artiste != "Tous" || $annee != "Tous" || $label != "Tous"){
+      $req .= " WHERE";
+    }
+    if($genre != "Tous"){
+      $req .=  " genre='$genre'";
+      $addAND = TRUE;
+    }
+    if($artiste != "Tous"){
+      if ($addAND) {
+          $req .= " AND";
+      }
+      $req .= " artiste='$artiste'";
+      //$addAND = TRUE;
+    }
+    if($annee != "Tous"){
+      if ($addAND) {
+          $req .= " AND";
+      }
+      $req .= " annee=$annee";
+      //$addAND = TRUE;
+    }
+    if($label != "Tous"){
+      if ($addAND) {
+          $req .= " AND";
+      }
+      $req .= " label='$label'";
+    }
+   $lignedb = $this->db->query($req);
+    $lancement = $lignedb->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($lancement as $vinyle) {
+      $objVinyle = new Vinyle($vinyle);
+      array_push($result, $objVinyle);
+    }
 
     if (count($result)!=0) {
       //var_dump($result);
