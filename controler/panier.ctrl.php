@@ -36,9 +36,8 @@ if($action!=null){
     supprimerArticle($l);
     break;
 
-    Case "refresh" :
-    echo"refresh";
-    for ($i = 0 ; $i < $QteArticle ; $i++)
+    Case "refresh":
+    for ($i = 0 ; $i < count($QteArticle) ; $i++)
     {
       modifierQTeArticle($_SESSION['panier']['libelleProduit'][$i],$QteArticle[$i]);
     }
