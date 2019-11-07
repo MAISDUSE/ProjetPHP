@@ -24,9 +24,8 @@
   <section>
 
 
-    <form method="get" action="panier.ctrl.php">
-    <form method="get" action="panier.ctrl.php" id="panier">
-      <table style="width: 400px">
+    <form method="get" action="panier.ctrl.php" class="formPanier">
+      <table>
         <tr>
           <td>Votre panier</td>
         </tr>
@@ -47,8 +46,8 @@
           {
             ?>
             <tr>
-              <td><?= $panier_libelles[$i] ?></td>
-              <td><input type="number"  name="q[]" value=<?= $panier_quantites[$i] ?> max="100" </></td>
+              <td><?= $panier_libelles[$i]?></td>
+              <td><input type="number"  name="q[]" value=<?= $panier_quantites[$i] ?> max="100" class="choixQuantite" </></td>
               <td><?= $panier_prix[$i] ?></td>
               <td><a href="panier.ctrl.php?action=suppression&l=<?= $panier_libelles[$i] ?>">X</a></td>
             </tr>
@@ -56,16 +55,22 @@
           <tr>
             <td>Total de : <?= $prix_Total ?>€ TTC</td>
           </tr>
-          <input type="submit" value="Rafraichir"/>
+          <input type="submit" value="Rafraichir" id="refreshButton"/>
           <input type="hidden" name="action" value="refresh"/>
         <?php } ?>
 
       </table>
     </form>
-    <form method="post">
-      <input type="submit" name="commander" value="Commander">
+    <form method="post" class="formPanier">
+      <input type="submit" name="commander" value="Commander" id="commanderButton">
     </form>
     <p><?=$commande?></p>
   </section>
+  <footer>
+    <ul class="footer">
+      <li>Copyright (c) 2019 Vinylooper</li>
+      <li><a href="../controler/contact.ctrl.php">Nous contacter</a></li>
+    </ul>
+  </footer>
 </body>
 </html>
