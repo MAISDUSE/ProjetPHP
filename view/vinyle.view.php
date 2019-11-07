@@ -55,9 +55,9 @@
             <div class="ajoutePanier">
                 <form class="" action="" method="post">
 
-                  Quantité :<input type="number" id="quantiteChoisi" name="quantiteChoisi" min="0" max="100">
+                  Quantité :<input type="number" id="quantiteChoisi" name="quantiteChoisi" value="1" min="1" max="100">
                   <p>Prix : <?= $vinyle->getPrix()?>€/par unité</p>
-                  <input type="hidden" name="vinyleChoisi" value="<?= urlencode(serialize($vinyle))?>">
+                  <input type="hidden" id="vinyle" name="vinyle" value="<?= urlencode(serialize($vinyle))?>">
                   <input type="submit" name="panier" value="Ajouter au panier">
                 </form>
             </div>

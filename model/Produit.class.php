@@ -65,6 +65,9 @@ class Produit {
   public function getPrixTotal(){
     return $this->quantite*$this->prix;
   }
+  public function setQuantite($q){
+     $this->quantite= $q;
+  }
 
 }
 
