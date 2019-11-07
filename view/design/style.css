@@ -222,6 +222,10 @@ input[type=image]{
   width: 500px;
 }
 
+.viewCatSec a{
+  text-decoration: underline;
+}
+
 /* ------------------------Register--------------------- */
 
 #connexion p {
