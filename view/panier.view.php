@@ -24,7 +24,7 @@
   <section>
 
 
-    <form method="get" action="panier.ctrl.php">
+    <form method="post" action="panier.ctrl.php">
       <table style="width: 400px">
         <tr>
           <td>Votre panier</td>
