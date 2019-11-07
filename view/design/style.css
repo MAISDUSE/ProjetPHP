@@ -5,12 +5,7 @@ body{
   width: 100%;
   height: 100%;
   margin: 0px;
-  padding-bottom: 60px;
-}
 
-.container{
-  min-height: 100%;
-  position: relative;
 }
 
 a {
@@ -61,6 +56,10 @@ nav ul {
 #nav_mid li a:hover {
   background-color: black;
   color: white;
+}
+
+#panier{
+  border-left: 1px solid black;
 }
 
 .logo{
@@ -117,10 +116,8 @@ h2{
 /*------------------------FOOTER--------------------------*/
 
 footer {
-  position: absolute;
-  height: 60px;
+  background-color: white;
   color: black;
-  min-width: 100%;
 }
 
 footer ul {
@@ -182,20 +179,24 @@ input[type=image]{
   height: 300px;
 }
 
-/* ------------------------Vinyle--------------------- */
+/* ------------------------PageProduit--------------------- */
+
+.produit{
+  padding-bottom: 14%;
+}
 
 .containerTitre{
   background-color: black;
   color: white;
 }
 
-.vinyle{
+.produit{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.vinyle img{
+.produit img{
   height: 500px;
   width: 500px;
 }
@@ -207,16 +208,18 @@ input[type=image]{
   justify-content: center;
 }
 
-.vinyle article div{
+.produit article div{
   margin: 10px;
   padding-top: 0px;
-
+  width: 500px;
 }
 .vinyleInfo p{
   margin-top: 0px;
 }
+
 .non{
   margin: 20px;
+  width: 500px;
 }
 
 /* ------------------------Register--------------------- */
@@ -224,6 +227,8 @@ input[type=image]{
 #connexion p {
   margin-top: 0px;
   padding-top: 20px;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
   text-align: center;
 }
 
@@ -232,7 +237,28 @@ input[type=image]{
 }
 
 .infosconnexion{
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 10px 0px;
   margin: 0px;
+}
+
+.infosconnexion div {
+  text-align: center;
+}
+
+.infosconnexion input{
+  width: 150px;
+  
+}
+
+.infosconnexion div label{
+  display: inline-block;
+  width: 300px;
+  text-align: right;
+}
+
+.infosconnexion div input{
+  width: 200px;
 }

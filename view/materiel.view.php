@@ -15,7 +15,6 @@
       <ul id="nav_mid">
         <li><a href="../controler/catVinyle.ctrl.php">Vinyles</a></li> <!--Vinyles-->
         <li><a href="../controler/catMateriel.ctrl.php">Matériel</a></li> <!--MatÃ©riel-->
-        <li><a href="#">Assistance</a></li> <!--FAQ-->
         <li><a href="#" id="panier">Panier</a></li> <!--Panier--> <!--<img src="../view/design/panier_image.png" alt="Panier" class="boutonsNav">-->
         <li><a href="../controler/register.ctrl.php">Se connecter</a></li> <!--Se connecter--> <!--<img src="../view/design/connexion_image.png" alt="Se connecter" class="boutonsNav">-->
       </ul>
@@ -25,7 +24,7 @@
     <h2><?=$materiel->getIntitule()?></h2>
   </div>
 
-  <section class="vinyle">
+  <section class="produit">
 
   <img src="../model/data/img/<?= $materiel->getImg() ?>" alt="<?=$materiel->getIntitule()?>">
 
@@ -38,11 +37,11 @@
               <p>Modéle : <?=$materiel->getNom()?></p>
 
               <form  action="catMateriel.ctrl.php" method="post">
-                  <p>constructeur : <input type="submit" name="artisteChoisi" value="<?=$materiel->getConstructeur()?>"></p>
+                  <p>constructeur : <input type="submit" name="constructeurChoisi" value="<?=$materiel->getConstructeur()?>"></p>
               </form>
 
               <form  action="catMateriel.ctrl.php" method="post">
-                  <p>Type : <input type="submit" name="genreChoisi" value="<?=$materiel->getType()?>"></p>
+                  <p>Type : <input type="submit" name="typeChoisi" value="<?=$materiel->getType()?>"></p>
               </form>
 
 

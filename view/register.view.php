@@ -14,8 +14,7 @@
         </ul>
         <ul id="nav_mid">
           <li><a href="../controler/catVinyle.ctrl.php">Vinyles</a></li> <!--Vinyles-->
-          <li><a href="#">Matériel</a></li> <!--MatÃ©riel-->
-          <li><a href="#">Assistance</a></li> <!--FAQ-->
+          <li><a href="../controler/catMateriel.ctrl.php">Matériel</a></li> <!--MatÃ©riel-->
           <li><a href="#" id="panier">Panier</a></li> <!--Panier--> <!--<img src="../view/design/panier_image.png" alt="Panier" class="boutonsNav">-->
           <li><a href="../controler/register.ctrl.php">Se connecter</a></li> <!--Se connecter--> <!--<img src="../view/design/connexion_image.png" alt="Se connecter" class="boutonsNav">-->
         </ul>
@@ -44,16 +43,20 @@
       <h2>Connexion - Log In</h2>
       <form method="post" class="infosconnexion" id="login">
 
-        <label for="lemail">Adresse e-mail : </label>
-        <input type="email" name="lemail" id="lemail" placeholder="Votre email" required><br>
+        <div class="">
+          <label for="lemail">Adresse e-mail : </label>
+          <input type="email" name="lemail" id="lemail" placeholder="Votre email" required>
+        </div>
 
-        <label for="lpassword">Mot de passe : </label>
-        <input type="password" name="lpassword" id="lpassword" placeholder="Votre Mot de passe" required><br>
+        <div class="">
+          <label for="lpassword">Mot de passe : </label>
+          <input type="password" name="lpassword" id="lpassword" placeholder="Votre Mot de passe" required>
+        </div>
 
         <input type="submit" name="formlogin" id="formlogin" value="Se connecter">
-
+        <p><?= $etat ?></p>
       </form>
-      <p><?= $etat ?></p>
+
 
 
       <h2>Inscription - Sign In</h2>
@@ -75,8 +78,9 @@
         <input type="password" name="cpassword" id="cpassword" placeholder="Confirmez Mot de passe" required><br>
 
         <input type="submit" name="formsend" id="formsend" value="S'inscrire">
+        <p><?= $etat2 ?></p>
       </form>
-      <p><?= $etat2 ?></p>
+
     </section>
     <footer>
       <ul class="footer">

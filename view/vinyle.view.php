@@ -14,8 +14,7 @@
         </ul>
         <ul id="nav_mid">
           <li><a href="../controler/catVinyle.ctrl.php">Vinyles</a></li> <!--Vinyles-->
-          <li><a href="#">Matériel</a></li> <!--MatÃ©riel-->
-          <li><a href="#">Assistance</a></li> <!--FAQ-->
+          <li><a href="../controler/catMateriel.ctrl.php">Matériel</a></li> <!--MatÃ©riel-->
           <li><a href="#" id="panier">Panier</a></li> <!--Panier--> <!--<img src="../view/design/panier_image.png" alt="Panier" class="boutonsNav">-->
           <li><a href="../controler/register.ctrl.php">Se connecter</a></li> <!--Se connecter--> <!--<img src="../view/design/connexion_image.png" alt="Se connecter" class="boutonsNav">-->
         </ul>
@@ -26,7 +25,7 @@
       <h2><?=$vinyle->getIntitule()?></h2>
     </div>
 
-    <section class="vinyle">
+    <section class="produit">
       <img src="../model/data/img/<?= $vinyle->getImg() ?>" alt="<?=$vinyle->getIntitule()?>">
 
 
@@ -55,7 +54,7 @@
             <div class="ajoutePanier">
                 <form class="" action="" method="post">
 
-                  Quantité :<input type="number" id="quantiteChoisi" name="quantiteChoisi" min="0" max="100">
+                  Quantité : <input type="number" id="quantiteChoisi" name="quantiteChoisi" min="0" max="100">
                   <p>Prix : <?= $vinyle->getPrix()?>€/par unité</p>
                   <input type="hidden" name="vinyleChoisi" value="<?= urlencode(serialize($vinyle))?>">
                   <input type="submit" name="panier" value="Ajouter au panier">
