@@ -62,8 +62,9 @@
       </table>
     </form>
     <form method="post">
-      <input type="submit" name="Commander" value="Commander">
+      <input type="submit" name="commander" value="Commander">
     </form>
+    <p><?=$commande?></p>
   </section>
 </body>
 </html>
