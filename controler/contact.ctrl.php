@@ -7,7 +7,7 @@ include('../framework/view.class.php');
 
 $view = new View();
 
-$view->assign('panier',$_SESSION['panier']);
+$view->display("contact.view.php");
 
 
 ?>

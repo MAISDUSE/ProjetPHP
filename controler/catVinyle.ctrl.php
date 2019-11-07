@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('../model/VinyleDAO.class.php');
 require_once('../model/MaterielDAO.class.php');
 
