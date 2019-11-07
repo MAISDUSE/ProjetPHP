@@ -76,6 +76,12 @@
 
           </div>
          <?php } ?>
+         <?php
+         if (count($vinylesDispo)==0) {
+           print("<p>Aucun vinyle trouvé... </p> \n");
+           print("<p><a href=\"../controler/main.ctrl.php\">Retour au menu principal</a></p> \n");
+         }
+         ?>
        </section>
 
         <footer>
