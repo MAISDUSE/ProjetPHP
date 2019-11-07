@@ -30,11 +30,7 @@
         <p>Votre Email :<?=$_SESSION['email'];?></p>
         <p>Votre Nom :<?=$_SESSION['nom'];?></p>
         <p>Votre Prenom :<?=$_SESSION['prenom'];?></p>
-<<<<<<< HEAD
         <form method="post" class="infosconnexion">
-=======
-        <form method="post" class="infosconnexion" >
->>>>>>> 1b62273ae9997209edf59bc9e6342445fe7a7b2e
           <input type="submit" name="deconnexion" id="deconnexion" value="Se deconnecter">
         </form>
 
