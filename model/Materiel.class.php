@@ -4,6 +4,7 @@ require_once('Produit.class.php');
 class Materiel extends Produit{
   private $constructeur;
   private $type;
+  private $nom;
 
   function __construct(array $array, int $quantite=0){
     Produit::__construct($array['intitule'], $array['info'], $array['prix'], $array['ref'], $array['categorie'], $array['img'],$quantite);
@@ -13,7 +14,7 @@ class Materiel extends Produit{
     }
 
     $this->type = $array['type'] ?? "autre";
-
+    $this->nom = $array['nom'] ?? "inconnue";
 
     assert(isset($this->constructeur));
   }
@@ -24,6 +25,10 @@ class Materiel extends Produit{
 
   public function getType(){
     return $this->type;
+  }
+
+  public function getNom(){
+    return $this->nom;
   }
 
 } ?>

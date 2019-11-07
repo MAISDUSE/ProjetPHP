@@ -45,8 +45,8 @@
           foreach($typespres as $matos){ //Parcours array list des genres de vinyle rÃ©cuperÃ©s depuis la bd et on recupÃ¨re chaque premier vinyle de chaque genre pour avoir l'illsutration
             ?>
             <div class="">
-              <a href=""><p><?= $matos->getType() ?></p></a>
-              <a href=""><img class="cover" src="../model/data/img/<?= $matos->getImg() ?>" alt="<?= $matos->getIntitule()?>"/></a>
+              <a href="../controler/catMateriel.ctrl.php?type=<?= $matos->getType()?>"><img class="cover" src="../model/data/img/<?= $matos->getImg() ?>" alt="<?= $matos->getIntitule()?>"/></a>
+              <a href="../controler/catMateriel.ctrl.php?type=<?= $matos->getType()?>"><p><?= $matos->getType() ?></p></a>
             </div>
           <?php } ?>
         </div>

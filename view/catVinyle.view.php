@@ -73,7 +73,7 @@
             <form  action="../controler/vinyle.ctrl.php" method="post">
                 <p><?=$vinyle->getIntitule()?></p>
                 <input type="hidden" id="vinyle" name="vinyle"   value="<?= urlencode(serialize($vinyle))?>" >
-                <input type="image"  name="img" value="<?= $vinyle->getImg() ?>" src="../model/data/img/<?= $vinyle->getImg() ?>" >
+                <input type="image"  name="img" value="<?= $vinyle->getIntitule() ?>" src="../model/data/img/<?= $vinyle->getImg() ?>" >
             </form>
 
           </div>
