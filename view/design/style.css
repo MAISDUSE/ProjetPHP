@@ -61,10 +61,6 @@ nav ul {
   float: left;
 }
 
-#panier{
-  border-left: 1px solid black;
-}
-
 .boutonsNav{
   width: 10px;
   height: 10px;
@@ -144,9 +140,10 @@ footer ul li a {
   flex-wrap: wrap;
   justify-content: center;
   height: 50px;
-
+  color: white;
   align-items: center;
-
+  border-bottom: 1px solid white;
+  margin-bottom: 0px;
 }
 .catFormulaire form div{
   justify-content: center;
@@ -167,6 +164,7 @@ input[type=image]{
   width: 300px;
   height: 300px;
 }
+
 /* ------------------------ Vinyle--------------------- */
 
 .vinyle{

@@ -32,7 +32,7 @@
                 </select>
               </div>
 
-                <div class="">Artistes :<select name="artisteChoisi">
+                <div class="">Artistes : <select name="artisteChoisi">
                             <option  value="Tous">Tous</option>
                             <?php foreach ($allArtistes as $artiste) { ?>
                               <option <?php if ($artisteC==$artiste) {print("selected");} ?> value="<?= $artiste ?>"><?= $artiste ?></option>
@@ -40,7 +40,7 @@
                           </select>
                </div>
 
-                <div class="">Années :<select name="anneeChoisi" id="anneeChoisi">
+                <div class="">Années : <select name="anneeChoisi" id="anneeChoisi">
                           <option value="Tous">Tous</option>
                           <?php foreach ($allAnnees as $annee) { ?>
                             <option <?php if ($anneeC==$annee) {print("selected");} ?> value="<?= $annee ?>"><?= $annee ?></option>
@@ -61,7 +61,7 @@
                     <input type="submit" name="valider" value="OK">
                 </div>
 
-            </form><br>
+            </form>
         </section>
       </header>
 
