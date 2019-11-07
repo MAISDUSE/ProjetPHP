@@ -61,6 +61,9 @@
 
       </table>
     </form>
+    <form method="post">
+      <input type="submit" name="Commander" value="Commander">
+    </form>
   </section>
 </body>
 </html>
