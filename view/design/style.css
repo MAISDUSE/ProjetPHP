@@ -59,22 +59,35 @@ h2{
   text-align: center;
 }
 
-.cat ul {
-  border-top: 1px solid black;
-}
-
-.cat{
-    display: flex;
-    flex-wrap: wrap;
+.cat {
+  border-top: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .cat div{
   margin: 10px;
 }
 
+.cat a {
+  text-align: center;
+}
+
+.displayObjets{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .cover {
   width: 300px;
   height: 300px;
+}
+
+.plus{
+
+  text-decoration: underline;
 }
 
 /*------------------------FOOTER--------------------------*/
