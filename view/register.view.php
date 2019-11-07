@@ -53,7 +53,7 @@
           <input type="password" name="lpassword" id="lpassword" placeholder="Votre Mot de passe" required>
         </div>
 
-        <div class="">
+        <div class="sbmit">
           <input type="submit" name="formlogin" id="formlogin" value="Se connecter">
           <p><?= $etat ?></p>
         </div>
@@ -90,7 +90,7 @@
           <input type="password" name="cpassword" id="cpassword" placeholder="Confirmez Mot de passe" required>
         </div>
 
-        <div class="">
+        <div class="sbmit">
           <input type="submit" name="formsend" id="formsend" value="S'inscrire">
           <p><?= $etat2 ?></p>
         </div>

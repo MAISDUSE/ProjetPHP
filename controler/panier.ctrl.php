@@ -1,6 +1,9 @@
 <?php
 session_start();
+<<<<<<< HEAD
 include_once("../model/fonctions_panier.php");
+=======
+>>>>>>> d7c755c291aa364e750e5143463f821ac39db194
 
 $erreur = false;
 
