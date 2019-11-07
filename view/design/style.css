@@ -251,6 +251,11 @@ input[type=image]{
   justify-content: center;
 }
 
+.infosconnexion div:last-of-type{
+  display: block;
+  text-align: center;
+}
+
 #formsend{
   width: 150px;
   margin-top: 10px;
