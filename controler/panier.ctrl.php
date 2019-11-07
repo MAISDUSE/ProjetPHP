@@ -16,7 +16,6 @@ if($action!=null){
   $p = (isset($_POST['p'])? $_POST['p']:  (isset($_GET['p'])? $_GET['p']:null )) ;
   $q = (isset($_POST['q'])? $_POST['q']:  (isset($_GET['q'])? $_GET['q']:null )) ;
 
-var_dump($q);
 //Si l'on modifie la quantité de plusierus article d'un coup, $q devietn un array
   if (is_array($q)){
       $QteArticle = array();
@@ -39,10 +38,8 @@ var_dump($q);
 
     Case "refresh" :
     echo"refresh";
-    var_dump($QteArticle);
     for ($i = 0 ; $i < $QteArticle ; $i++)
     {
-      var_dump($QteArticle[$i]);
       modifierQTeArticle($_SESSION['panier']['libelleProduit'][$i],$QteArticle[$i]);
     }
     break;

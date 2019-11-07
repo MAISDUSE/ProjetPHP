@@ -47,7 +47,7 @@
             ?>
             <tr>
               <td><?= $panier_libelles[$i] ?></td>
-              <td><input type="number"  name="q" value=<?= $panier_quantites[$i] ?> max="100" </></td>
+              <td><input type="number"  name="q[]" value=<?= $panier_quantites[$i] ?> max="100" </></td>
               <td><?= $panier_prix[$i] ?></td>
               <td><a href="panier.ctrl.php?action=suppression&l=<?= $panier_libelles[$i] ?>">X</a></td>
             </tr>
