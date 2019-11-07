@@ -25,6 +25,7 @@
 
 
     <form method="get" action="panier.ctrl.php">
+    <form method="get" action="panier.ctrl.php" id="panier">
       <table style="width: 400px">
         <tr>
           <td>Votre panier</td>
