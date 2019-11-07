@@ -248,17 +248,24 @@ input[type=image]{
   text-align: center;
 }
 
-.infosconnexion input{
-  width: 150px;
-  
+#formsend{
+  width: 100px;
+  margin-left: 47.5%;
+  margin-top: 10px;
+}
+
+#formlogin{
+  width: 100px;
+  margin-left: 47.5%;
+  margin-top: 10px;
 }
 
 .infosconnexion div label{
   display: inline-block;
-  width: 300px;
+  width: 180px;
   text-align: right;
 }
 
 .infosconnexion div input{
-  width: 200px;
+  width: 180px;
 }

@@ -62,20 +62,31 @@
       <h2>Inscription - Sign In</h2>
       <form method="post" class="infosconnexion" id="signin">
 
-        <label for="nom">Nom :</label>
-        <input type="text" name="nom" placeholder="Votre Nom" required><br>
+        <div class="">
+          <label for="nom">Nom :</label>
+          <input type="text" name="nom" placeholder="Votre Nom" required>
+        </div>
 
-        <label for="prenom">Prénom : </label>
-        <input type="text" name="prenom" id="prenom" placeholder="Votre prenom" required><br>
+        <div class="">
+          <label for="prenom">Prénom : </label>
+          <input type="text" name="prenom" id="prenom" placeholder="Votre prenom" required>
+        </div>
 
-        <label for="semail">Adresse e-mail : </label>
-        <input type="email" name="semail" id="semail" placeholder="Votre email" required><br>
+        <div class="">
+          <label for="semail">Adresse e-mail : </label>
+          <input type="email" name="semail" id="semail" placeholder="Votre email" required>
+        </div>
 
-        <label for="password">Mot de passe : </label>
-        <input type="password" name="password" id="password" placeholder="Votre Mot de passe" required><br>
+        <div class="">
+          <label for="password">Mot de passe : </label>
+          <input type="password" name="password" id="password" placeholder="Votre Mot de passe" required>
+        </div>
 
-        <label for="cpassword">Confirmer mot de passe : </label>
-        <input type="password" name="cpassword" id="cpassword" placeholder="Confirmez Mot de passe" required><br>
+        <div class="">
+          <label for="cpassword">Confirmer mot de passe : </label>
+          <input type="password" name="cpassword" id="cpassword" placeholder="Confirmez Mot de passe" required>
+        </div>
+
 
         <input type="submit" name="formsend" id="formsend" value="S'inscrire">
         <p><?= $etat2 ?></p>
