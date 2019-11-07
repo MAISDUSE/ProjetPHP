@@ -56,9 +56,8 @@
     <footer>
       <ul class="footer">
         <li>Copyright (c) 2019 Vinylooper</li>
-        <li><a href="">Nous contacter</a></li>
+        <li><a href="../controler/contact.ctrl.php">Nous contacter</a></li>
       </ul>
-
     </footer>
   </body>
   </html>

@@ -19,4 +19,10 @@
         <li><a href="../controler/register.ctrl.php">Se connecter</a></li> <!--Se connecter--> <!--<img src="../view/design/connexion_image.png" alt="Se connecter" class="boutonsNav">-->
       </ul>
     </nav>
+    <footer>
+      <ul class="footer">
+        <li>Copyright (c) 2019 Vinylooper</li>
+        <li><a href="../controler/contact.ctrl.php">Nous contacter</a></li>
+      </ul>
+    </footer>
   </header>
