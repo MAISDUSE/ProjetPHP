@@ -26,9 +26,11 @@
       <?php
       if(isset($_SESSION['email']) && isset($_SESSION['nom']) && isset($_SESSION['prenom'])){
         ?>
+        <h2>Bienvenue sur votre profil</h2>
         <p>Votre Email :<?=$_SESSION['email'];?></p>
         <p>Votre Nom :<?=$_SESSION['nom'];?></p>
         <p>Votre Prenom :<?=$_SESSION['prenom'];?></p>
+        <form method="post" class="infosconnexion">
           <input type="submit" name="deconnexion" id="deconnexion" value="Se deconnecter">
         </form>
 
