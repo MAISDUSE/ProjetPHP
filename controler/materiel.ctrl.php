@@ -11,7 +11,6 @@ $view = new View();
 $config = parse_ini_file('../config/config.ini');
 
 $materiel= unserialize(urldecode($_POST['materiel']));
-var_dump($materiel);
 
 $view->assign("materiel",$materiel);
 

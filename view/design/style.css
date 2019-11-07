@@ -5,6 +5,12 @@ body{
   width: 100%;
   height: 100%;
   margin: 0px;
+  padding-bottom: 60px;
+}
+
+.container{
+  min-height: 100%;
+  position: relative;
 }
 
 a {
@@ -111,7 +117,10 @@ h2{
 /*------------------------FOOTER--------------------------*/
 
 footer {
+  position: absolute;
+  height: 60px;
   color: black;
+  min-width: 100%;
 }
 
 footer ul {
@@ -155,8 +164,15 @@ footer ul li a {
 .viewCatSec{
   color: white;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  padding-bottom: 20px;
 }
+
+.viewCatSec form p{
+  text-align: center;
+}
+
 .viewCatDiv{
   margin: 10px;
 }
@@ -166,14 +182,18 @@ input[type=image]{
   height: 300px;
 }
 
-/* ------------------------ Vinyle--------------------- */
+/* ------------------------Vinyle--------------------- */
+
+.containerTitre{
+  background-color: black;
+  color: white;
+}
 
 .vinyle{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 
 .vinyle img{
   height: 500px;
@@ -197,4 +217,22 @@ input[type=image]{
 }
 .non{
   margin: 20px;
+}
+
+/* ------------------------Register--------------------- */
+
+#connexion p {
+  margin-top: 0px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+#login {
+  border-bottom: 1px solid white;
+}
+
+.infosconnexion{
+  text-align: center;
+  padding: 10px 0px;
+  margin: 0px;
 }

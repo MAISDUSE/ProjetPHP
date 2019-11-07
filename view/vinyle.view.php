@@ -8,7 +8,6 @@
   <body>
 
     <header class="menu">
-      <a href="../controler/main.ctrl.php"><img src="" alt="Vinylooper Logo" class="logo"></a> <!--Logo-->
       <nav>
         <ul id="nav_left">
           <li><a href="../controler/main.ctrl.php"><img src="" alt="Vinylooper Logo" class="logo"></a></li> <!--Logo-->
@@ -22,10 +21,13 @@
         </ul>
       </nav>
     </header>
-    <h2><?=$vinyle->getIntitule()?></h2>
-    <section class="vinyle">
 
-    <img src="../model/data/img/<?= $vinyle->getImg() ?>" alt="<?=$vinyle->getIntitule()?>">
+    <div class="containerTitre">
+      <h2><?=$vinyle->getIntitule()?></h2>
+    </div>
+
+    <section class="vinyle">
+      <img src="../model/data/img/<?= $vinyle->getImg() ?>" alt="<?=$vinyle->getIntitule()?>">
 
 
         <article class="">

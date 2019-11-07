@@ -8,15 +8,16 @@
 <body>
 
   <header class="menu">
-    <a href="../controler/main.ctrl.php"><img src="" alt="Vinylooper Logo" class="logo"></a> <!--Logo-->
-
     <nav>
-      <ul class="nav_mid">
+      <ul id="nav_left">
+        <li><a href="../controler/main.ctrl.php"><img src="" alt="Vinylooper Logo" class="logo"></a></li> <!--Logo-->
+      </ul>
+      <ul id="nav_mid">
         <li><a href="../controler/catVinyle.ctrl.php">Vinyles</a></li> <!--Vinyles-->
-        <li><a href="#">Matériel</a></li> <!--Matériel-->
+        <li><a href="../controler/catMateriel.ctrl.php">Matériel</a></li> <!--MatÃ©riel-->
         <li><a href="#">Assistance</a></li> <!--FAQ-->
-        <li><a href="#"><img src="../view/design/panier_image.png" alt="Panier" class="boutonsNav"></a></li> <!--Panier-->
-        <li><a href="#"><img src="../view/design/connexion_image.png" alt="Se connecter" class="boutonsNav"></a></li> <!--Se connecter-->
+        <li><a href="#" id="panier">Panier</a></li> <!--Panier--> <!--<img src="../view/design/panier_image.png" alt="Panier" class="boutonsNav">-->
+        <li><a href="../controler/register.ctrl.php">Se connecter</a></li> <!--Se connecter--> <!--<img src="../view/design/connexion_image.png" alt="Se connecter" class="boutonsNav">-->
       </ul>
     </nav>
 
@@ -32,12 +33,13 @@
             </select>
           </div>
 
-            <div class="">Constructeur :<select name="constructeurChoisi" id="constructeurChoisi">
-                        <option  value="Tous">Tous</option>
-                        <?php foreach ($allConstructeurs as $constructeur) { ?>
-                          <option <?php if ($constructeurC==$constructeur) {print("selected");} ?> value="<?= $constructeur ?>"><?= $constructeur ?></option>
-                        <?php } ?>
-                      </select>
+            <div class="">Constructeur :
+              <select name="constructeurChoisi" id="constructeurChoisi">
+                <option  value="Tous">Tous</option>
+                <?php foreach ($allConstructeurs as $constructeur) { ?>
+                  <option <?php if ($constructeurC==$constructeur) {print("selected");} ?> value="<?= $constructeur ?>"><?= $constructeur ?></option>
+                <?php } ?>
+              </select>
            </div>
 
             <div class="">
