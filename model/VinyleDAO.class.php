@@ -140,14 +140,14 @@ class VinyleDAO {
           $req .= " AND";
       }
       $req .= " artiste='$artiste'";
-      //$addAND = TRUE;
+      $addAND = TRUE;
     }
     if($annee != "Tous"){
       if ($addAND) {
           $req .= " AND";
       }
       $req .= " annee=$annee";
-      //$addAND = TRUE;
+      $addAND = TRUE;
     }
     if($label != "Tous"){
       if ($addAND) {
