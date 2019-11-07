@@ -15,7 +15,6 @@
       <ul id="nav_mid">
         <li><a href="../controler/catVinyle.ctrl.php">Vinyles</a></li> <!--Vinyles-->
         <li><a href="../controler/catMateriel.ctrl.php">Matériel</a></li> <!--MatÃ©riel-->
-        <li><a href="#">Assistance</a></li> <!--FAQ-->
         <li><a href="#" id="panier">Panier</a></li> <!--Panier--> <!--<img src="../view/design/panier_image.png" alt="Panier" class="boutonsNav">-->
         <li><a href="../controler/register.ctrl.php">Se connecter</a></li> <!--Se connecter--> <!--<img src="../view/design/connexion_image.png" alt="Se connecter" class="boutonsNav">-->
       </ul>
@@ -35,7 +34,7 @@
           </div>
         <?php } ?>
         </div>
-        <a href="#" class="plus">Voir Plus...</a>
+        <a href="../controler/catVinyle.ctrl.php" class="plus">Voir Plus...</a>
       </div>
 
       <h2>Matériel</h2>
@@ -50,7 +49,7 @@
             </div>
           <?php } ?>
         </div>
-        <a href="#" class="plus">Voir Plus...</a>
+        <a href="../controler/catMateriel.ctrl.php" class="plus">Voir Plus...</a>
       </div>
     </section>
 
