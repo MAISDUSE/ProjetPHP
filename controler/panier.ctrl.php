@@ -11,6 +11,7 @@ $view = new View();
 if(isset($_POST['commander'])){
   if(isset($_SESSION['email']) && isset($_SESSION['nom']) && isset($_SESSION['prenom'])){
     $commande = "Commande validé, un mail a été envoyé à : " . $_SESSION['email'];
+    supprimePanier();
   }else {
     $commande = "Veuillez vous connecter";
   }

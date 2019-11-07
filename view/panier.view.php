@@ -37,7 +37,7 @@
           <td>Action</td>
         </tr>
         <?php
-        if($vide=="NULL"){
+        if($vide!=NULL){
           ?>
           <tr>
             <td><?= $vide ?></td>
