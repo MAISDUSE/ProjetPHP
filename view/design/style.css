@@ -275,3 +275,14 @@ input[type=image]{
 .infosconnexion div input{
   width: 174px;
 }
+
+/* ------------------------Contact--------------------- */
+
+#contact{
+  padding: 21% 0%;
+  color: white;
+}
+
+#contact p{
+  margin: 0px;
+}

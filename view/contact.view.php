@@ -19,6 +19,9 @@
         <li><a href="../controler/register.ctrl.php">Se connecter</a></li> <!--Se connecter--> <!--<img src="../view/design/connexion_image.png" alt="Se connecter" class="boutonsNav">-->
       </ul>
     </nav>
+    <section id="contact">
+      <p>Vous avez des questions ? Un problème ? Envoyez nous un mail à l'adresse suivante : vinylooper@vl.com</p>
+    </section>
     <footer>
       <ul class="footer">
         <li>Copyright (c) 2019 Vinylooper</li>
