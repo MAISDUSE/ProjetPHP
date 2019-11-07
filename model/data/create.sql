@@ -28,5 +28,6 @@ CREATE TABLE Utilisateur (
   nom VARCHAR(100),
   prenom VARCHAR(100),
   email VARCHAR(200),
-  password VARCHAR(100)
+  password VARCHAR(100),
+  panier LONGTEXT
 );
