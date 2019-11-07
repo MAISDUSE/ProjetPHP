@@ -8,6 +8,16 @@ include('../framework/view.class.php');
 $view = new View();
 
 
+if(isset($_POST['commander'])){
+  if(isset($_SESSION['email']) && isset($_SESSION['nom']) && isset($_SESSION['prenom'])){
+    $commande = "Commande validé, un mail a été envoyé à : " . $_SESSION['email'];
+  }else {
+    $commande = "Veuillez vous connecter";
+  }
+  $view->assign('commande',$commande);
+}
+
+
 $action=(isset($_POST['action'])?$_POST['action']  :  (isset($_GET['action']) )?$_GET['action'] : null);
 if($action!=null){
 
