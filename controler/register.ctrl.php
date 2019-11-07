@@ -1,68 +1,83 @@
 <?php
+session_start();//demare une session_start
+//session_unset();//vide la session pour bouton deconection
+//session_destroy(); //puis detruit la session.
+
+
 // Inclus le mini framework
 include('../framework/view.class.php');
 
 $view = new View();
 $config = parse_ini_file('../config/config.ini');
+//acces a la bd pour pouvoir insert into les infos du nouvel utilisateur et verifié que son email n'est pas deja utilisé.
+try {
+  $db = new PDO("sqlite:../model/data/data.db");
+}
+catch (PDOException $e) {
+  die("erreur de connexion : ".$e->getMessage());
+}
 
-//$view->display("register.view.php");
+  if (isset($_POST['deconexion'])) {
+    session_unset();//vide la session pour bouton deconection
+    session_destroy(); //puis detruit la session.
+  }
 
+if (isset($_POST['formlogin'])) {
+  extract($_POST);
+  if(!empty($lpassword) && !empty($lemail) ){
+    $req = "SELECT * from Utilisateur WHERE email='$lemail'";
+    $reponse = $db->query($req);
+    $donnee = $reponse->fetch();
+    if($donnee==true){
+      //compte existe bien
+      if(password_verify($lpassword,$donnee['password'])){
+        $etat= "Le mot de passe est bon, connection en cours...";
+        $_SESSION['email']=$donnee['email'];
+        $_SESSION['nom']=$donnee['nom'];;
+        $_SESSION['prenom']=$donnee['prenom'];;
+      }else {
+        $etat= "Mot de passe incorrect.";
+      }
 
+    }else{
+      $etat="Le compte portant l'email ".$lemail." n'existe pas.";
+    }
 
-?>
-<form action="register.ctrl.php" method="post">
-  <input type="text" name="nom" placeholder="Votre Nom" required><br>
-  <input type="text" name="prenom" id="prenom" placeholder="Votre prenom" required><br>
-  <input type="email" name="email" id="email" placeholder="Votre email" required><br>
-  <input type="password" name="password" id="password" placeholder="Votre Mot de passe" required><br>
-  <input type="password" name="cpassword" id="cpassword" placeholder="Confirmer votre Mot de passe" required><br>
-  <input type="submit" name="formsend" id="formsend" value="S'inscrire">
-</form>
+  }
+}
 
-<?php
 if (isset($_POST['formsend'])) {
   extract($_POST);
-  if(!empty($password) && !empty($cpassword) && !empty($email) && !empty($nom) && !empty($prenom)){
+  if(!empty($password) && !empty($cpassword) && !empty($semail) && !empty($nom) && !empty($prenom)){
     if($password==$cpassword){
       $hashpass = password_hash($password,PASSWORD_DEFAULT);
 
-      //acces a la bd pour pouvoir insert into les infos du nouvel utilisateur et verifié que son email n'est pas deja utilisé.
-      //les requetes prepare et execute ne marchent pas.
-      try {
-        $db = new PDO("sqlite:../model/data/data.db");
-      }
-      catch (PDOException $e) {
-        die("erreur de connexion : ".$e->getMessage());
-      }
-      $req = "SELECT email from Utilisateur WHERE email='$email'";
+
+      $req = "SELECT email from Utilisateur WHERE email='$semail'";
       $reponse = $db->query($req);
       $donnee = $reponse->fetch();
       //var_dump($donnee);
 
       if($donnee==NULL){
-        echo 'email non utilisé';
-        $req = $bd->prepare("INSERT INTO Utilisateur(nom, prenom, email, password) VALUES(:nom,:prenom,:email,:hashpass) ");
-        $req->execute(array(
-          'nom' => $nom,
-          'prenom' => $prenom,
-          'email' => $email,
-          'hashpass' => $hashpass,
-        ));
-
-        //$req = "INSERT INTO Utilisateur(nom,prenom,email,password) VALUES('$nom','$prenom','$email','$hasspass')";
-        //$lignedb = $db->query($req);
-        echo"Le compte a été créé";
+        $req ="INSERT INTO Utilisateur(nom, prenom, email, password) VALUES(\"$nom\",\"$prenom\",\"$semail\",\"$hashpass\")";
+        $db->query($req);
+        $_SESSION['email']=$semail;
+        $_SESSION['nom']=$nom;
+        $_SESSION['prenom']=$prenom;
+        $etat="Le compte a été créé";
       }else{
-        echo "Cet email est déja utilisé ! ";
+        $etat2= "Cet email est déja utilisé.";
       }
 
 
 
 
+    }else {
+      $etat2="Mot de passe différents.";
     }
   }
 }
-
-
-
+$view->assign("etat",$etat);
+$view->assign("etat2",$etat2);
+$view->display("register.view.php");
 ?>
