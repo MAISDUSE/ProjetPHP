@@ -37,7 +37,7 @@
               <p>Modéle : <?=$materiel->getNom()?></p>
 
               <form  action="catMateriel.ctrl.php" method="post">
-                  <p>constructeur : <input type="submit" name="constructeurChoisi" value="<?=$materiel->getConstructeur()?>"></p>
+                  <p>Constructeur : <input type="submit" name="constructeurChoisi" value="<?=$materiel->getConstructeur()?>"></p>
               </form>
 
               <form  action="catMateriel.ctrl.php" method="post">
