@@ -16,11 +16,12 @@ try {
 catch (PDOException $e) {
   die("erreur de connexion : ".$e->getMessage());
 }
-
-  if (isset($_POST['deconexion'])) {
+if(isset($_SESSION['email']) && isset($_SESSION['nom']) && isset($_SESSION['prenom'])){
+  if (isset($_POST['deconnexion'])) {
     session_unset();//vide la session pour bouton deconection
     session_destroy(); //puis detruit la session.
   }
+}
 
 if (isset($_POST['formlogin'])) {
   extract($_POST);
@@ -32,6 +33,7 @@ if (isset($_POST['formlogin'])) {
       //compte existe bien
       if(password_verify($lpassword,$donnee['password'])){
         $etat= "Le mot de passe est bon, connection en cours...";
+
         $_SESSION['email']=$donnee['email'];
         $_SESSION['nom']=$donnee['nom'];;
         $_SESSION['prenom']=$donnee['prenom'];;
