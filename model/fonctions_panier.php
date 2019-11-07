@@ -102,7 +102,7 @@ function MontantTotal(){
 function supprimePanier(){
   unset($_SESSION['panier']);
 }
-/*
+
 // Compte le nombre d'articles différents dans le panier
 function compterArticles()
 {
@@ -112,5 +112,5 @@ function compterArticles()
   return 0;
 
 }
-*/
+
 ?>
