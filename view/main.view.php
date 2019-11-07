@@ -22,7 +22,11 @@
   </header>
 
   <section>
-   <h2>Vinyles</h2>
+
+    <div class="containerTitre2">
+      <h2>Vinyles</h2>
+    </div>
+    
     <div class="cat"> <!--Nos vinyles-->
       <div class="displayObjets">
         <?php
@@ -37,7 +41,10 @@
         <a href="../controler/catVinyle.ctrl.php" class="plus">Voir Plus...</a>
       </div>
 
-      <h2>Matériel</h2>
+      <div class="containerTitre2">
+        <h2>Matériel</h2>
+      </div>
+
       <div class="cat"> <!--Notre matÃ©riel-->
         <div class="displayObjets">
           <?php
