@@ -26,8 +26,7 @@ CREATE TABLE Materiel (
 
 CREATE TABLE Utilisateur (
   nom VARCHAR(100),
-  prenom VARCHAR(100),
+  prenom VARCHAR(100) PRIMARY KEY,
   email VARCHAR(200),
-  password VARCHAR(100),
-  panier LONGTEXT
+  password VARCHAR(100)
 );
